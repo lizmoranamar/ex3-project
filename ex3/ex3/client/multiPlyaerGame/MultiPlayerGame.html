@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<!--Multiplayer game page-->
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/meyer-reset/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../page/css/page-style.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-4.0.0-alpha.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div id='header'></div>
+    <div class="box-title">
+        <div class="h2-left"><h2>Multiplayer Game</h2></div>
+        <!--loading-->
+        <div id="loading-maze" class="loading" style="display:none">
+            <h4 id="lodaing-text">Loading</h4>
+            <img src="../page/img/loading.gif" class="img-loading" />
+        </div>
+        <hr class="style1">
+    </div>
+    <!--user login-->
+    <div class="left-form" id="from-multi" style="display:none">
+        <div class="container">
+            <!--join game form-->
+            <form id="join-game">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label col-form-label-sm" for="text">Games</label>
+                    <div class="dropdown col-sm-10">
+                        <select id="games" value="dropDown" onfocus="dropdownFocus()" class="btn btn-secondary btn-sm">
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-sm-2 col-sm-10">
+                        <button type="button" class="btn btn-secondary btn-sm" id="btnJoinGame">Join Game</button>
+                    </div>
+                </div>
+            </form>
+            <div class="txt-title">
+                <hr class="style1">
+                <h4 class="start-title">Start New Game</h4>
+            </div>
+            <!--start game form-->
+            <form id="start-game">
+                <div class="form-group row" id="name-div">
+                    <label class="col-sm-2 col-form-label col-form-label-sm" for="text">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-sm" id="name" placeholder="mymaze">
+                    </div>
+                </div>
+                <div class="form-group row" id="rows-div">
+                    <label class="col-sm-2 col-form-label col-form-label-sm" for="number">Rows</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control form-control-sm" id="rows" placeholder="10">
+                        <label id="errorRowsRange" class="col-form-label col-form-label-sm error-lebal">enter number in range 1 to 100</label>
+                    </div>
+                </div>
+                <div class="form-group row" id="cols-div">
+                    <label class="col-sm-2 col-form-label col-form-label-sm" for="number">Cols</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control form-control-sm" id="cols" placeholder="10">
+                        <label id="errorColsRange" class="col-form-label col-form-label-sm error-lebal">enter number in range 1 to 100</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-sm-2 col-sm-10">
+                        <button type="button" class="btn btn-secondary btn-sm" id="btnStartGame">Start Game</button> 
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--canvas-->
+    <div id="myCanvas" class="canvas-left" style="display:none">
+        <canvas id="mazeCanvas" width="370" height="370" style="border:0.5px black solid"></canvas>
+    </div>
+    <!--canvas-->
+    <div id="otherCanvas" class="canvas-left" style="display:none">
+        <canvas id="otherMazeCanvas" width="370" height="370" style="border:0.5px black solid"></canvas>
+    </div>
+    <!--user not login-->
+    <div id="not-connected" class="left-form" style="display:none">
+        <h4 class="login">Log in to play multiplayer game</h4>
+        <form action="../users/Login-Register.html">
+            <div class="container">
+                <button class="btn btn-outline-secondary btn-lg" type="submit">Login/Register</button> 
+            </div>
+        </form>
+    </div>
+    <!--scripts-->
+    <script src="../Scripts/jquery-3.1.1.js"></script> 
+    <script src="../header/js/loadHeader.js"></script> 
+    <script src="../../Scripts/jquery.signalR-2.2.2.js"></script>
+    <script src="../../signalr/hubs"></script>
+    <script src="../page/js/jquery.multiMazeBoard.js"></script>
+    <script src="../multiPlyaerGame/js/multiplayer.js"></script>
+</body>
+</html>

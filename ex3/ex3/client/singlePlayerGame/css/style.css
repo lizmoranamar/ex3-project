@@ -1,0 +1,51 @@
+﻿h4{
+    color:#ccc !important;
+    display:inline-block;
+}
+
+/*form*/
+.left-form{
+    float:left;
+    max-width: 30%;
+    margin-left:10%;
+}
+
+/*option*/
+.option-style{
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    border-radius: .2rem;
+}
+
+/*canvas*/
+.canvas-left{
+    margin-left:50%;
+}
+
+/*h2 title*/
+.h2-left{
+    max-width: 30%;
+    display: inline-block;
+}
+
+/*loading spinner*/
+.loading{
+    max-width:30%;
+    margin-left:2%;
+    display: inline-block;   
+}
+
+/*loading img*/
+.img-loading{
+    display:inline-block; 
+    width:7%;
+    height:7%;
+    margin-bottom:3%;
+    margin-left:1%
+}
+
+/*error lebal*/
+.error-lebal{
+    display:none;
+    color:red
+}

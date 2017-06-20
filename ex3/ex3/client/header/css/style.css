@@ -1,0 +1,73 @@
+﻿body {
+    margin:0;
+}
+
+/*right padding*/
+.right{
+    float:right;
+    margin-right:11%
+}
+
+/*menu*/
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  padding-left:10%;
+}
+
+/*link*/
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/*link hover*/
+.topnav a:hover {
+  background-color: #111;
+  color: white;
+}
+
+/*menu responsive button*/
+.topnav .icon {
+  display: none;
+}
+
+/*hello label*/
+.name{
+    display: block;
+    color: #ed2553;
+    text-align: center;
+    padding-top: 14px;
+    padding-right: 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/*responsive header*/
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: left;
+    display: block;
+  }
+}
+
+/*responsive header*/
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
